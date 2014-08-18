@@ -1,0 +1,2 @@
+wget http://www.freespecialeffects.co.uk/soundfx/sirens/police_s.wav
+python -m SimpleHTTPServer
