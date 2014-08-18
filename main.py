@@ -1,6 +1,8 @@
 from os import popen
 from os import path
 
+popen("rm *jpeg")
+
 index= 1
 
 while 1:
@@ -14,6 +16,6 @@ while 1:
 	str= popen("convert cam1.jpeg cam2.jpeg -compose Difference -composite -colorspace gray -format '%[fx:mean*100]' info:").read()
 	diff= float(str)
 	print "diff: ", diff
-	if diff> 1:
+	if diff> 0.7:
 		popen("aplay police_s.wav")
 
